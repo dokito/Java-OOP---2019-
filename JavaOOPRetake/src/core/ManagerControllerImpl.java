@@ -54,6 +54,7 @@ public class ManagerControllerImpl implements ManagerController {
         } else if (MAGIC_CARD_TYPE.equals(type)) {
             card = new MagicCard(name);
         }
+        this.cardRepository.add(card);
         String message = String.format(SUCCESSFULLY_ADDED_CARD, type, name);
 
         return message;
